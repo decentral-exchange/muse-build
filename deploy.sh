@@ -18,7 +18,7 @@ git config user.email "info@decentral.exchange"
 git config user.name "Decentral Exchange"
 git add .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --quiet origin master > /dev/null 2>&1 
+git push origin master
 COMMIT=$(git rev-parse --verify HEAD --short)
 
 ################################################
@@ -53,4 +53,4 @@ git config user.name "Decentral Exchange"
 git add -A .
 git commit -am "[muse-version] $hash / Travis #$TRAVIS_BUILD_NUMBER"
 echo "Pushing new wallet repo"
-git push --quiet origin master > /dev/null 2>&1 
+git push origin master
