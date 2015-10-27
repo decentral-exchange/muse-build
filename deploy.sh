@@ -34,7 +34,7 @@ git clone https://${GH_TOKEN}@github.com/decentral-exchange/decentral-exchange.g
 
 echo "Updating web page repo"
 cd decentral-exchange.github.io
-FILE="_version/$(date +%s).md"
+FILE="_muse-version/$(date +%s).md"
 cat <<EOF > $FILE
 ---
 hash: $hash
@@ -51,6 +51,6 @@ echo "Updating github webpage repository"
 git config user.email "info@decentral.exchange"
 git config user.name "Decentral Exchange"
 git add -A .
-git commit -am "[version] $hash / Travis #$TRAVIS_BUILD_NUMBER"
+git commit -am "[muse-version] $hash / Travis #$TRAVIS_BUILD_NUMBER"
 echo "Pushing new wallet repo"
 git push --quiet origin master > /dev/null 2>&1 
