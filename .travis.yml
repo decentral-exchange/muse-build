@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+go:
+    - 1.5.1
+node_js:
+    - "0.12"
+#    - "0.10"
+env:
+  global:
+   - CXX=g++-4.8
+   - secure: hpORGM6EKqMY9LAvz+oIrjWj9IQFBv5Ras9mOAe8pHcXTY3M+j/SpPHOElLqbml6ZeAlhqzo5icMfVSjssGrC6QHK1QuPF4s2zerBB/PosEDVgpaI/NT6gqf3nlLv0zS/vdejV24BTNR4T2HVzz+MsDR0yL4PaKsxnvqTxhBq9AA/aooKt2fXck6mEOPuw2KApicKzSNVCiRGLrkW+qwbn5EsG3hKLjH5i0o3/K1zO4jAglYX2my/M0Wwd0T/nlPcFejQ5VZxC5uXlDrPW6X28jTHReCtxZn0ywadsznz8p/OFUjuQr12FpL9nWygIQxOUQqm0HD0TQVZAclIx8vtNMiNcHBgB8BE1q92qbmie2N96XgI2xULityufModHxFfRzdTrBmlGBCf411FiUfQrF5zHTgLgdlFcdhMZZwrYlT82TOVoJObwPqXuIXlkdacOUol5qUXyLybHwkuhHPaDYcDhl+NJCNDqsyDWfKPg7yiZLKU7hh8XYxt5D3impNqhYa9CaQTVXxixfAKPj1SOBBMvFoLlLs94VI1GrC//pXPlCmnTqETdIMUzsH5VblGNTbg/1zm+fyxdBeoliO00XV1AFdZcDTtOzbfDOy/tPjWM/Tgmvd5+yriTErRlfJY1oWNhMMmdiL/rJgnicSmHMzZHtC7oCraO38luNICFw=
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+before_install: 
+    - ./install.sh
+script: 
+    - ./build.sh
+after_success:
+  - "./deploy.sh"
