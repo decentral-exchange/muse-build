@@ -1,14 +1,13 @@
 sudo: false
 language: node_js
 go:
-    - 1.5.1
+- 1.5.1
 node_js:
-    - "0.12"
-#    - "0.10"
+- '0.12'
 env:
   global:
-   - CXX=g++-4.8
-   - secure: hpORGM6EKqMY9LAvz+oIrjWj9IQFBv5Ras9mOAe8pHcXTY3M+j/SpPHOElLqbml6ZeAlhqzo5icMfVSjssGrC6QHK1QuPF4s2zerBB/PosEDVgpaI/NT6gqf3nlLv0zS/vdejV24BTNR4T2HVzz+MsDR0yL4PaKsxnvqTxhBq9AA/aooKt2fXck6mEOPuw2KApicKzSNVCiRGLrkW+qwbn5EsG3hKLjH5i0o3/K1zO4jAglYX2my/M0Wwd0T/nlPcFejQ5VZxC5uXlDrPW6X28jTHReCtxZn0ywadsznz8p/OFUjuQr12FpL9nWygIQxOUQqm0HD0TQVZAclIx8vtNMiNcHBgB8BE1q92qbmie2N96XgI2xULityufModHxFfRzdTrBmlGBCf411FiUfQrF5zHTgLgdlFcdhMZZwrYlT82TOVoJObwPqXuIXlkdacOUol5qUXyLybHwkuhHPaDYcDhl+NJCNDqsyDWfKPg7yiZLKU7hh8XYxt5D3impNqhYa9CaQTVXxixfAKPj1SOBBMvFoLlLs94VI1GrC//pXPlCmnTqETdIMUzsH5VblGNTbg/1zm+fyxdBeoliO00XV1AFdZcDTtOzbfDOy/tPjWM/Tgmvd5+yriTErRlfJY1oWNhMMmdiL/rJgnicSmHMzZHtC7oCraO38luNICFw=
+  - CXX=g++-4.8
+  - secure: raORj1tKbeT9ALJHtX1wcw5G8Tbo1epf26R0Ux83VLEYc+9BGAhHCMC2vCxjN/GssY6a5SvrkmlIL+IjxZ2JPS/0KayVrMlTuxQzHoIWxhantAghrfHgUtJeCCJIFXnZ8JU8iBN3VGG7CyECeuEiRgXp3yNoJuKyO4h1Dd0MaP+O8DSVvPGOfjL6e6rCcKaDvF1znf4+xa4wfAThan3EmUMU/xP/H5SJmb7UAX5KrcmJ6WfjBXgTYdgfL81fSNk1srk8UcivG1KTlFtVNzynIG4y6PAg0nrqftgHRZOFJSZACA0sC+j5+hSYsDyrjWXjhaEKaLV4+U8eMH0prttuKPsmzax+1onmodt3MtUBOEAg47sO6ZHmL3DZgIddsR9yID+2Y831eR9k6mpdsOZMmDFzud0kKUb1Do28KaQM8bihVlyNCEWnCTujSwkbjlxcQ2kK+n1+ekPNZsKmn8lhr8sXEA/XmvBubf4SGSL3ILPq8vPHJdzr1GByyqqR1ssHPxOopeQ45RoGluJxDiQVwPXhdiHh6iR0xom6YUvrupva4ZXHLvLPuhrRJfx1tDLif2n5cRF3yP2iLWEwMf8JZf2u2I8R4TjbNy10LzyhX3qF84Laq800c+h/jcmRhFByCDoLjgM1FaU5ikTC2XCbjr0BmfQOQkVh+3GzY0BQb6k=
 addons:
   apt:
     sources:
@@ -16,9 +15,9 @@ addons:
     packages:
     - gcc-4.8
     - g++-4.8
-before_install: 
-    - ./install.sh
-script: 
-    - ./build.sh
+before_install:
+- "./install.sh"
+script:
+- "./build.sh"
 after_success:
-  - "./deploy.sh"
+- "./deploy.sh"
