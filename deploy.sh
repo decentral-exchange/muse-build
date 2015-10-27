@@ -4,15 +4,15 @@ export PATH=$HOME/gopath/bin:$PATH
 ################################################
 
 echo "Cloning wallet repo"
-git clone https://${GH_TOKEN}@github.com/decentral-exchange/wallet
+git clone https://${GH_TOKEN}@github.com/decentral-exchange/muse-wallet
 
 echo "Copying compiled files over to repo"
 ls -al muse-ui/web/dist/
-ls -al wallet/
-cp -Rv muse-ui/web/dist/* wallet/
+ls -al muse-wallet/
+cp -Rv muse-ui/web/dist/* muse-wallet/
 
 echo "Pushing new wallet repo"
-cd wallet
+cd muse-wallet
 git status
 git config user.email "info@decentral.exchange"
 git config user.name "Decentral Exchange"
